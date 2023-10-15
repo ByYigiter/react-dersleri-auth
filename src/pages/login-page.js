@@ -22,7 +22,7 @@ const LoginPage = () => {
 		};
 		try {
 			setLoading(true);
-			const respAuth = await axios.post(`${API_BASE_URL}/login`, auth);
+			const respAuth = await axios.post(`${API_BASE_URL}/login`, auth); // gonderilen data auth 
 			const token = respAuth.data.token;
 
 			const authHeader = { Authorization: `Bearer ${token}` };
