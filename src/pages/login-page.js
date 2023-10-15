@@ -34,7 +34,7 @@ const LoginPage = () => {
 			dispatchAuth(loginSuccess(respUser.data));
 			console.log(respUser.data);
 
-			navigate("/");
+			navigate("/"); // bu login olduktan sonra sayfalar ararsı gezmeyi sağlar
 		} catch (error) {
 			alert(error.response.data.message);
 			dispatchAuth(loginFail());
